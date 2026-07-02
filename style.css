@@ -1,0 +1,261 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+p{
+    font-family: 'Anton';
+    font-size: 1.5rem;
+    color: white;
+    
+}
+.corazon {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  top: 45%;
+  left: 45%;
+  background-color: red;
+  transform: rotate(45deg);
+  box-shadow: 10px 10px 90px red;
+  animation: heart 0.6s linear infinite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+
+}
+
+.corazon::before,
+.corazon::after {
+  content: "";
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border-radius: 60%;
+  background-color: red;
+  box-shadow: 10px 10px 90px red;
+ 
+
+}
+
+.corazon::before {
+  top: -90px;
+  left: 0;
+  
+}
+
+.corazon::after {
+  left: -90px;
+  top: 0;
+}
+.corazon p{
+    position: absolute;
+    color: white;
+    font-size: 3rem;
+    transform: rotate(-45deg) translate(-30%,-140%);
+    z-index: 999999;
+    top: 30%;
+    left: 40%;
+    width: 100%;
+
+    
+}
+
+corazon:hover{
+  transform:scale(1.08);
+    box-shadow:
+0 0 70px red;
+}
+body{
+    background:
+linear-gradient(
+180deg,
+#090909,
+#131313,
+#090909
+);
+    display: flex;
+    width: 100%;
+    height: 100vh;
+}
+@keyframes heart{
+    0%{
+        transform: rotate(45deg) scale(1.07);
+    }
+    80%{
+        transform: rotate(45deg) scale(1.0);
+    }
+}
+@keyframes open{
+  0%{
+    transform: rotate(45deg) scale(1.0);
+   
+  }
+  
+  50%{
+    transform: rotate(45deg) scale(7.0);
+    
+  }
+  100%{
+    transform: rotate(45deg) scale(15.0);
+    
+  }
+
+}
+.contenido{
+    visibility: hidden;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+}
+main{
+ display:none;
+ width: 100%;
+ height: 100vh;
+ padding: 10rem 0px;
+}
+h1{
+    display: block;
+    color: white;
+    font-size: 3rem;
+    text-align: center;
+    font-family: 'Anton';
+    padding: 2rem 0px 2rem 0px;
+    background: linear-gradient(
+90deg,
+#ff7eb3,
+#ff4d6d,
+#ffd166
+);
+
+-webkit-background-clip:text;
+color:transparent;
+
+    
+    
+}
+.mensaje1{
+ display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas:
+    "izquierda texto derecha"
+    ".         abajo .";
+  gap: 70px;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 20rem;
+  opacity:0;
+transform:translateY(80px);
+opacity:1;
+transform:translateY(0);
+transition:1s;
+}
+
+.izquierda { 
+  grid-area: izquierda;
+ 
+
+   }
+.texto     { 
+  grid-area: texto;
+     background: rgba(255,255,255,.05);
+    backdrop-filter: blur(8px);
+    border:1px solid rgba(255,255,255,.1);
+    border-radius:20px;
+    padding:30px;
+    line-height:1.8;
+  
+}
+
+.derecha   { 
+  grid-area: derecha;
+  
+}
+.abajo     { 
+  grid-area: abajo;
+   
+}
+ 
+.texto1, .texto2 {
+     background: rgba(255,255,255,.05);
+    backdrop-filter: blur(8px);
+    border:1px solid rgba(255,255,255,.1);
+    border-radius:20px;
+    padding:30px;
+    line-height:1.8;
+}
+
+
+
+.contenido-mensaje1{
+  width: 5rem;
+  height: 3rem;
+  object-fit: cover;
+}
+.mensaje2{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 70px;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 20rem;
+  opacity:0;
+transform:translateY(80px);
+opacity:1;
+transform:translateY(0);
+transition:1s;
+
+}
+img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius:20px;
+    box-shadow:
+0 20px 40px rgba(255,0,100,.2);
+}
+.mensaje3{
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 70px;
+  padding: 5rem 20rem;
+  opacity:0;
+transform:translateY(80px);
+opacity:1;
+transform:translateY(0);
+transition:1s;
+}
+.texto3{
+  grid-column: 1 / -1;
+     background: rgba(255,255,255,.05);
+    backdrop-filter: blur(8px);
+    border:1px solid rgba(255,255,255,.1);
+    border-radius:20px;
+    padding:30px;
+    line-height:1.8;
+}
+.divider{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin:80px 0;
+}
+
+.divider::before,
+.divider::after{
+    content:"";
+    width:100%;
+    height:1px;
+    background:#ff6b9a;
+}
+
+.divider span{
+    margin:0 20px;
+    font-size:25px;
+}

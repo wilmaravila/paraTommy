@@ -259,3 +259,187 @@ transition:1s;
     margin:0 20px;
     font-size:25px;
 }
+
+/* ESTILOS RESPONSIVOS PARA MÓVILES */
+@media (max-width: 768px) {
+    /* Corazón más pequeño */
+    *{
+        margin: 0%;
+        padding: 0%;
+    }
+    .corazon {
+      position: absolute;
+        width: 120px;
+        height: 120px;
+     
+        
+    }
+
+    .corazon::before,
+    .corazon::after {
+        width: 120px;
+        height: 120px;
+    }
+
+    .corazon::before {
+        top: -55px;
+    }
+
+    .corazon::after {
+        left: -55px;
+    }
+
+    .corazon p {
+        font-size: 1.5rem;
+        transform: rotate(-45deg) translate(-30%, -140%);
+    }
+
+    /* Texto general */
+    p {
+        font-size: 1rem;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+        padding: 1.5rem 1rem;
+    }
+
+    /* Mensaje 1 - Una columna */
+    .mensaje1 {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "izquierda"
+            "texto"
+            "derecha"
+            "abajo";
+        gap: 20px;
+        padding: 0px 1rem;
+    }
+
+    .izquierda,
+    .derecha,
+    .abajo {
+        max-width: 100%;
+    }
+
+    /* Mensaje 2 - Una columna */
+    .mensaje2 {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 0px 1rem;
+    }
+
+    .imagen1,
+    .imagen2 {
+        max-width: 100%;
+    }
+
+    /* Mensaje 3 - Una columna */
+    .mensaje3 {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 1.5rem;
+    }
+
+    .imagen3 {
+        max-width: 100%;
+    }
+
+    .texto3 {
+        grid-column: 1;
+    }
+
+    /* Contenedor principal */
+    main {
+        padding: 2rem 0px;
+        height: auto;
+    }
+
+    .contenido {
+        height: auto;
+    }
+
+    body {
+        height: auto;
+        min-height: 100vh;
+    }
+
+    /* Dividers */
+    .divider {
+        margin: 40px 0;
+    }
+
+    .divider span {
+        font-size: 18px;
+    }
+
+    /* Texto con fondo */
+    .texto,
+    .texto1,
+    .texto2,
+    .texto3 {
+        padding: 15px;
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Pantallas muy pequeñas */
+    .corazon {
+        width: 100px;
+        height: 100px;
+        top: 50%;
+        left: 50%;
+    }
+
+    .corazon::before,
+    .corazon::after {
+        width: 100px;
+        height: 100px;
+    }
+
+    .corazon::before {
+        top: -45px;
+    }
+
+    .corazon::after {
+        left: -45px;
+    }
+
+    .corazon p {
+        font-size: 1.2rem;
+    }
+
+    p {
+        font-size: 0.9rem;
+    }
+
+    h1 {
+        font-size: 1.4rem;
+        padding: 1rem 0.5rem;
+    }
+
+    .mensaje1,
+    .mensaje2,
+    .mensaje3 {
+        padding: 0px 0.5rem;
+    }
+
+    .texto,
+    .texto1,
+    .texto2,
+    .texto3 {
+        padding: 12px;
+        font-size: 0.85rem;
+        border-radius: 12px;
+    }
+
+    .divider {
+        margin: 30px 0;
+    }
+
+    img {
+        border-radius: 12px;
+    }
+}
